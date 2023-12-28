@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap");
 
 :root {
-	--highlight-color: #00b4ff;
-    --transition-duration: 150ms;
+    --transition-duration: 0.35s;
+
+	--border-radius: 0.625rem;
+	--image-gap: 5px;
+	--image-border-radius: calc(var(--border-radius) - var(--image-gap));
 }
 
 body {
@@ -18,6 +21,33 @@ body {
 .main h3 {
 	font-weight: 200;
 	text-align: center;
+}
+
+.about-header a {
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 50%;
+	box-shadow: rgb(104, 104, 104, 0.5) 0 2px 6px 0, rgba(211, 209, 209, 0.15) 0 0 0 1px;
+	transition-duration: var(--transition-duration);
+}
+
+.about-header a:active {
+	transform: scale(0.9);
+}
+
+.about-header a img {
+	width: 100%;
+	height: 100%;
+	transform-origin: 50% 50%;
+	transition-duration: var(--transition-duration);
+}
+
+.about-header a img:hover {
+	transform: scale(1.25);
 }
 
 .content {
@@ -48,11 +78,6 @@ body {
 	margin-top: -15px;
 }
 
-.about-header img {
-	border-radius: 50%;
-	max-width: 100px;
-}
-
 .links {
 	max-width: 700px;
 	margin-left: auto;
@@ -64,42 +89,49 @@ body {
 }
 
 .link {
+	overflow: hidden;
+	display: block;
+	text-align: left;
+	margin-bottom: 16px;
+	border-radius: var(--border-radius);
+	box-shadow: rgb(104, 104, 104, 0.05) 0 2px 6px 0, rgba(211, 209, 209, 0.15) 0 0 0 1px;
+	text-decoration: none;
+	transition-duration: var(--transition-duration);
+
 	text-decoration: none;
 	display: flex;
-	border: 1px solid black;
 	max-height: var(--link-height);
-	color: #1b1b1b;
 	margin-bottom: 15px;
 	margin-left: 15px;
 	margin-right: 15px;
 
-	border-radius: 5px;
-	border-top: 1px solid rgba(0, 0, 0, 0.3);
-	border-left: 1px solid rgba(0, 0, 0, 0.4);
-	border-right: 1px solid rgba(0, 0, 0, 0.4);
-	border-bottom: 2px solid rgba(0, 0, 0, 0.4);
-	transition-duration: var(--transition-duration);
+	color: #1b1b1b;
 }
 
 .link:hover {
-	color: var(--highlight-color);
-	box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.4)-light;
-	border-color: var(--highlight-color);
+	background-color: rgba(0, 0, 0, 0.035);
+	transform: scale(1.025);
+}
+
+.link:active {
+	transform: scale(0.95);
 }
 
 .link .image_container {
-	padding: 5px;
+	padding: var(--image-gap);
 	max-height: var(--link-height);
 	max-width: var(--link-height);
 }
 
 .link .image_container img {
-	border-radius: 5px;
+	border-radius: var(--image-border-radius);
+	box-shadow: rgb(104, 104, 104, 0.05) 0 2px 6px 0, rgba(211, 209, 209, 0.15) 0 0 0 1px;
 	object-fit: contain;
 	max-height: 100%;
 }
 
 .link p {
-	font-weight: 500;
+	font-size: 20px;
+	font-weight: bold;
 	margin: auto;
 }
