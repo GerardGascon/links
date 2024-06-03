@@ -42,7 +42,7 @@
 				</div>
 				<p>LinkedIn</p>
 			</a>
-			<a class="link" href="mailto:ggasconmoline@gmail.com" target="_blank">
+			<a class="link mlink" target="_blank">
 				<div class="image_container">
 					<img src="/images/links/email.png" />
 				</div>
@@ -74,6 +74,21 @@
 			</a>
 		</div>
 	</div>
+
+	<script>
+		const me = "ggasconmoline";
+		const place = "gmail.com";
+
+		const elink = document.querySelectorAll(".mlink");
+		const etext = document.querySelectorAll(".mtext");
+
+		elink.forEach(function (el) {
+			el.href = `mailto:${me}@${place}`;
+		});
+		etext.forEach(function (el) {
+			el.textContent = `${me}@${place}`;
+		});
+	</script>
 </body>
 
 </html>
