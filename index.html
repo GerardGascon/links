@@ -12,10 +12,6 @@
 	<link rel="shortcut icon" href="/images/profile.ico" />
 	<link rel="stylesheet" href="index.css" />
 	<script src="https://kit.fontawesome.com/28575038bf.js" crossorigin="anonymous"></script>
-	<script>
-		if (window.location.href.includes('?')) window.location = window.location.href.split("?")[0];
-		if (window.location.href.includes('#')) window.location = window.location.href.split("#")[0];
-	</script>
 </head>
 
 <body>
@@ -42,17 +38,11 @@
 				</div>
 				<p>Game of the Day</p>
 			</a>
-			<a class="link" href="https://linkedin.gerardgascon.com" target="_blank">
+			<a class="link" href="https://itch.gerardgascon.com" target="_blank">
 				<div class="image_container">
-					<img src="/images/links/linkedin.png" />
+					<img src="/images/links/itchio.png" />
 				</div>
-				<p>LinkedIn</p>
-			</a>
-			<a class="link mlink" target="_blank">
-				<div class="image_container">
-					<img src="/images/links/email.png" />
-				</div>
-				<p>Email</p>
+				<p>Itch.io</p>
 			</a>
 			<a class="link" href="https://steam.gerardgascon.com" target="_blank">
 				<div class="image_container">
@@ -60,17 +50,11 @@
 				</div>
 				<p>Just in Crime on Steam</p>
 			</a>
-			<a class="link" href="https://itch.gerardgascon.com" target="_blank">
+			<a class="link" href="https://linkedin.gerardgascon.com" target="_blank">
 				<div class="image_container">
-					<img src="/images/links/itchio.png" />
+					<img src="/images/links/linkedin.png" />
 				</div>
-				<p>Itch.io</p>
-			</a>
-			<a class="link" href="https://twitter.gerardgascon.com" target="_blank">
-				<div class="image_container">
-					<img src="/images/links/twitter.png" />
-				</div>
-				<p>Twitter</p>
+				<p>LinkedIn</p>
 			</a>
 			<a class="link" href="https://mastodon.gerardgascon.com" target="_blank">
 				<div class="image_container">
@@ -78,23 +62,20 @@
 				</div>
 				<p>Mastodon</p>
 			</a>
+			<a class="link" href="https://bsky.gerardgascon.com" target="_blank">
+				<div class="image_container">
+					<img src="/images/links/bluesky.jpg" />
+				</div>
+				<p>Bluesky</p>
+			</a>
+			<a class="link" href="mailto:hello@gerardgascon.com" target="_blank">
+				<div class="image_container">
+					<img src="/images/links/email.png" />
+				</div>
+				<p>Email</p>
+			</a>
 		</div>
 	</div>
-
-	<script>
-		const me = "ggasconmoline";
-		const place = "gmail.com";
-
-		const elink = document.querySelectorAll(".mlink");
-		const etext = document.querySelectorAll(".mtext");
-
-		elink.forEach(function (el) {
-			el.href = `mailto:${me}@${place}`;
-		});
-		etext.forEach(function (el) {
-			el.textContent = `${me}@${place}`;
-		});
-	</script>
 </body>
 
 </html>
